@@ -1,4 +1,5 @@
 import React from 'react';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 /**
  * Functional react component for congratulatory message.
@@ -7,21 +8,20 @@ import React from 'react';
  * @returns {JSX.Element} - Rendered component (or null if 'success' prop is not recieved)
  */
 
-export default (props) => {
-  return (
+const Congrats = (props) => {
     if (props.success) {
       return(
         <div data-test='component-congrats'>
-        <span data-test='congrats-message'>
-          Congratulations! You guessed the word.
-        </span>
+          <span data-test='congrats-message'>
+            Congratulations! You guessed the word.
+          </span>
       </div>
       );
-
     } else {
       return (
         <div data-test="component-congrats"/>
       )
     }
-  );
 };
+
+export default Congrats;
