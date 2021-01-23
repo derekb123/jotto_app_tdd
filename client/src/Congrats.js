@@ -1,5 +1,6 @@
 import React from 'react';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import PropTypes from 'prop-types';
 
 /**
  * Functional react component for congratulatory message.
@@ -23,5 +24,9 @@ const Congrats = (props) => {
       )
     }
 };
+
+Congrats.propTypes = {
+  success: PropTypes.bool.isRequired
+}
 
 export default Congrats;
