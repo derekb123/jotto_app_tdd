@@ -6,11 +6,9 @@ import checkPropTypes from 'check-prop-types';
  * @returns {ShallowWrapper}
  */
 
-import { ShallowWrapper } from "enzyme";
-
 export const findByTestAttr = (wrapper, val) => {
   return wrapper.find(`[data-test="${val}"]`);
-}
+};
 
 export const checkProps =  (component, conformingProps) => {
   const propError = checkPropTypes(
@@ -20,4 +18,4 @@ export const checkProps =  (component, conformingProps) => {
     component.name
   );
   expect(propError).toBeUndefined();
-}
+};
